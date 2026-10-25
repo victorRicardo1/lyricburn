@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lyricburn"
+version = "0.1.0"
+description = "Queima letra sincronizada (.lrc/.srt/.vtt) em cima de vídeo, com pontinhos que dançam no instrumental"
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ricardo Victor" }]
+dependencies = []
+
+[project.optional-dependencies]
+notes = ["librosa>=0.10"]
+web = ["fastapi>=0.110", "uvicorn[standard]>=0.27", "python-multipart>=0.0.9"]
+
+[project.scripts]
+lyricburn = "lyricburn.cli:main"
+
+[tool.setuptools]
+packages = ["lyricburn", "lyricburn.server"]
+
+[tool.setuptools.package-data]
+lyricburn = ["fonts/*"]

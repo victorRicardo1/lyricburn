@@ -1,0 +1,6 @@
+{
+  "/projects": { "target": "http://127.0.0.1:8000", "secure": false, "changeOrigin": true },
+  "/jobs":     { "target": "http://127.0.0.1:8000", "secure": false, "changeOrigin": true },
+  "/fonts":    { "target": "http://127.0.0.1:8000", "secure": false, "changeOrigin": true },
+  "/config":   { "target": "http://127.0.0.1:8000", "secure": false, "changeOrigin": true }
+}

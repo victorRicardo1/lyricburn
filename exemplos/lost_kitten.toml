@@ -1,0 +1,43 @@
+# Exemplo: Lost Kitten (Metric) sobre gameplay — versão que começa em 0:45.
+# Pra versão de 2:26 com os pontinhos: comente music_start e descomente start_at_lyric,
+# com occurrence = 2 e lead_in = 7.76.
+# Caminhos são relativos a este arquivo.
+
+[input]
+video  = "gameplay.mp4"
+audio  = "Metric - Lost Kitten.mp3"
+lyrics = "Metric - Lost Kitten.lrc"          # .lrc, .srt ou .vtt
+
+[timing]
+music_start = "0:45"           # de onde a música começa (mm:ss)
+# start_at_lyric = "they got it"   # ou: começa por uma linha da letra...
+# occurrence = 5                   # ...a 5ª vez que ela aparece (veja com `lyricburn lines`)
+# lead_in = 2.0                    # ...N segundos antes dela
+video_offset  = 0              # em que segundo do vídeo a música entra
+lyrics_offset = 0              # ajuste fino de sync: +0.2 atrasa a letra, -0.2 adianta
+end = "auto"                   # auto | video | music
+
+[audio]
+game_volume  = 0.30
+music_volume = 1.0
+duck = false                   # true = abaixa o jogo só quando a música está forte
+
+[video]
+resolution = 720           # 720p ou 1080p (lado menor; funciona em vídeo vertical)
+fade_in  = 1.2
+fade_out = 2.5
+
+[style]
+font      = "Space Grotesk Medium"
+size      = 48
+position  = "center"           # center | bottom | top | 0.0–1.0
+color     = "#F5F5F5"
+back_font = "Space Grotesk"
+back_size = 32
+
+[dots]
+enabled  = true
+reactive = true                # pontinhos dançam com as notas do instrumental
+
+[output]
+path = "lost_kitten_final.mp4"
